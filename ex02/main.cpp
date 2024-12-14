@@ -1,11 +1,13 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+
 
 int main()
 {
-    ScavTrap sc("ALo ");
+    FragTrap sc("ALo ");
     // ClapTrap *ss =  new ScavTrap("bane");
-    ScavTrap s = sc;
+    FragTrap s = sc;
     // ClapTrap *sc = new ScavTrap("ALo");
     // sc->attack("test");
    // sc.attack("test");

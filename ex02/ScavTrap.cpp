@@ -1,6 +1,7 @@
 #include "ScavTrap.hpp"
 
 // : name(name), hit_point(100), energy(50), damage(20)
+// ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name), hit_point(100), energy(50), damage(20){
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name){
     // this->name = name;
     hit_point = 100;
