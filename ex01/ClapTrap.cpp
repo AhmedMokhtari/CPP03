@@ -1,12 +1,12 @@
 #include "ClapTrap.hpp"
 
 
- ClapTrap::ClapTrap(const std::string &name):name(name), hit_point(10), energy(10), damage(0){
-    std::cout << "String COnstructor has been called \n";
+ ClapTrap::ClapTrap(const std::string &name):name(name), hit_point(100), energy(50), damage(20){
+    std::cout << "String COnstructor has been called From ClapTrap \n";
  }
 
 ClapTrap::~ClapTrap(){
-  std::cout << "Destructor has been called \n";
+  std::cout << "Destructor has been called From ClapTrap\n";
 }
 
 void ClapTrap::attack(const std::string& target){
