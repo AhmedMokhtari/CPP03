@@ -1,14 +1,15 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
-
+#include "DiamondTrap.hpp"
 
 int main()
 {
-    FragTrap sc("ALo ");
-    sc.attack("alooooo");
+    DiamondTrap sc("ALo ");
+    sc.attack("sd");
+    //sc.attack("alooooo");
     // ClapTrap *ss =  new ScavTrap("bane");
-    FragTrap s = sc;
+    // FragTrap s = sc;
     // ClapTrap *sc = new ScavTrap("ALo");
     // sc->attack("test");
    // sc.attack("test");
