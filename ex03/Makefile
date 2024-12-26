@@ -1,4 +1,4 @@
-NAME = Repetitive
+NAME = Now
 
 SRC_O = main.o ClapTrap.o ScavTrap.o FragTrap.o DiamondTrap.o
 

@@ -1,8 +1,12 @@
 #include  "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap():ScavTrap("no_name"), FragTrap("no_name")
+DiamondTrap::DiamondTrap():ClapTrap("no_name_clap_name"),  FragTrap("no_name"), ScavTrap("no_name")
 {
     std::cout << "Default Constructor has been called form DiamondTrap\n";
+    name = "no_name";
+    hit_point = FragTrap::hit_point;
+    energy = ScavTrap::energy;
+    damage = FragTrap::damage;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -11,11 +15,15 @@ DiamondTrap::~DiamondTrap()
 
 }
 
-DiamondTrap::DiamondTrap(const std::string &name): ScavTrap(name), FragTrap(name){
+DiamondTrap::DiamondTrap(const std::string &name): ClapTrap(name + "_clap_name") ,FragTrap(name), ScavTrap(name) {
     std::cout << "String Constructor has been called form DiamondTrap\n";
+    this->name = name;
+    hit_point = FragTrap::hit_point;
+    energy = ScavTrap::energy;
+    damage = FragTrap::damage;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &cp):ClapTrap(cp), ScavTrap(cp), FragTrap(cp){
+DiamondTrap::DiamondTrap(const DiamondTrap &cp):ClapTrap(cp), FragTrap(cp), ScavTrap(cp){
     std::cout << "Copy Constructor has been called form DiamondTrap\n";
 }
 
@@ -27,15 +35,16 @@ DiamondTrap& DiamondTrap::operator =(const DiamondTrap &cp){
 
 
 void DiamondTrap::whoAmI(){
-    std::cout << "name is " << this->name << " Claptrap::name " << std::endl;
+    std::cout << "name is " << this->name << " Claptrap::name " << ClapTrap::name << std::endl;
 }
 
 
-// void DiamondTrap::attack(const std::string& target){
-//     if (energy  && hit_point)
-//     {
-//         std::cout << "DiamondTrap " << name  << " attacks " << target << ", causing " << damage << " points of damage!\n";
-//         energy--;
-//     }
-// }
+void DiamondTrap::attack(const std::string& target){
+    // if (energy  && hit_point)
+    // {
+    //     std::cout << "DiamondTrap " << name  << " attacks " << target << ", causing " << damage << " points of damage!\n";
+    //     energy--;
+    // }
+    ScavTrap::attack(target);
+}
 

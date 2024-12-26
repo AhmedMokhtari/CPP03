@@ -5,8 +5,9 @@
 
 int main()
 {
-    DiamondTrap sc("ALo ");
+    DiamondTrap sc("ALo");
     sc.attack("sd");
+    sc.whoAmI();
     //sc.attack("alooooo");
     // ClapTrap *ss =  new ScavTrap("bane");
     // FragTrap s = sc;
